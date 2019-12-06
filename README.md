@@ -22,7 +22,7 @@
 通过StringBuffer将《长恨歌》输入其中，利用循环将其每隔一段加上符号，然后创建一个方法使得用户输入一个符号，计算
 出这个符号在其中出现的次数。创建一个NewExpection类，用于异常处理，如输入为空值，就会抛出异常。
 四、流程图
-https://github.com/wasdjk/zxb/blob/master/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6(6).jpg
+![text](https://github.com/wasdjk/zxb/blob/master/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6(6).jpg)
 五、核心代码和注释
 https://github.com/wasdjk/zxb/blob/master/%E4%BB%A3%E7%A0%81.md
 六、运行截图 
