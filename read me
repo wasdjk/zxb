@@ -31,6 +31,53 @@
 添加上异常处理程序。
 流程图
 核心代码和注释
+public void actionPerformed(ActionEvent e) {            //事件判断
+
+        if(e.getActionCommand()=="登录")  
+        {  
+             if(jrb2.isSelected()) //学生在登录系统  
+            {           
+                 {
+					try {
+						stulogin();
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}}
+				} 
+                  //连接到学生的方法 页面}
+        }else if(e.getActionCommand()=="重置")  //清空界面
+        {  
+        	 clear();  
+        }             
+        else if(e.getActionCommand()=="退出"){
+       	 dispose(); 						//关闭界面      
+}}
+ Stu s=new Stu("26548","546","898",'5',"88");
+    	jt1.setText("姓名:"+jbf.getText()+"  密码:"+jpf.getText()+"\n"+"性别"+
+    jcb.getSelectedItem()+"  课程:"+jtf.getText()+"\n"+"出生年月: "+jbb.getSelectedItem()
+    +"年"+jbb1.getSelectedIndex()+"月"+"\n"+"所属院系:"+jrf.getText());       
+    	jt2.setText(s.toString());	
+File f=new File("D:\\新建文件夹 (2).sss.txt");//确定写入TXT文件的存放位置
+      	BufferedWriter writer=null;
+    	writer=new BufferedWriter(new FileWriter(f,true));//不覆盖原有文件进行输入
+      	String str=jt1.getText();  //转换成String格式
+      	writer.write(str);//写入数据
+    	writer.flush();//清空缓存
+    	writer.close(); //关闭文件
+      	try {
+      		String encoding="GBK";//定义格式
+    		InputStreamReader read=new InputStreamReader(new FileInputStream(f),encoding);
+    		BufferedReader b=new BufferedReader(read);
+    		String linetxt=null;//读取文件
+    		while((linetxt=b.readLine())!=null) {
+    			System.out.println(linetxt);//输出数据
+    		}
+    		read.close(); 
+    		}
+      	catch(Exception e) {
+      		System.out.println("读取文件错误");//异常处理机制
+      		e.printStackTrace();
 系统运行截图
 三、编程感想
     在本次实验是通过在上次实验设计GUI窗体，支持学生注册、课程新加、学生选课、学生退课、打印学生
